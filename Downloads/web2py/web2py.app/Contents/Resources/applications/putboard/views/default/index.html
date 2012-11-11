@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+{{for i in item:}}
+<post>
+    <h3>{{=i.name}} ${{=i.price}} </h3>
+    <img src="{{=URL('download', args=i.image)}}" width="200" />
+    <p>by {{=i.seller.email}} </p>
+    <p>{{=i.description}} </p>
+</post>
+{{pass}}
